@@ -26,3 +26,7 @@ Chapter 21 has no code. `code/ch08/maple_alloc_demo.c` is an exercise that build
 ## License
 
 The code is under the MIT License (see `LICENSE`), except `code/ch08/maple_alloc_demo.c`, which links with kernel code and is under GPL-2.0-or-later (see `LICENSES/GPL-2.0`). Every file carries an `SPDX-License-Identifier` line.
+
+## Errata and feedback
+
+Corrections to the book are listed in [ERRATA.md](ERRATA.md). To report an error in the book or a bug in the code, open an issue on this repository; please give the chapter and section, or the file and line.
