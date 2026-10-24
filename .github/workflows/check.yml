@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run make check in every chapter
         run: |
-          for d in ch*/; do
+          for d in code/ch*/; do
             echo "::group::$d"
             make -C "$d" check
             echo "::endgroup::"
