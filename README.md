@@ -6,7 +6,7 @@ The code is a set of small, self-contained userspace models of kernel structures
 
 ## Building and testing
 
-You need Linux, GCC, and `make`. Clang also works if its runtime library is installed (on Debian and Ubuntu, `libclang-rt-dev`), because the sanitizer checks for 128-bit multiplication in chapters 12, 13 and 18 need it: `make check CC="clang -rtlib=compiler-rt"`. Some programs use Linux-only interfaces such as `memfd_create()`, so the code does not build on macOS.
+You need Linux, GCC, and `make`. Clang also works. With some Clang versions (for example Clang 19 on Debian 13, arm64), the sanitizer builds of chapters 12 and 18 fail to link with plain `CC=clang` because their 128-bit multiplications need a helper that GCC's runtime does not provide; install Clang's runtime (`libclang-rt-dev` on Debian and Ubuntu) and use `make check CC="clang -rtlib=compiler-rt"`. Some programs use Linux-only interfaces such as `memfd_create()`, so the code does not build on macOS.
 
 ```sh
 cd code/ch02

@@ -299,6 +299,7 @@ int main(void)
 	printf("One CPU, 10 s; wakeups in the first 0.1 s are not counted\n");
 	printf("%-22s %10s %10s %14s  %s\n", "policy", "avg wait",
 	       "max wait", "waits >= 1 ms", "CPU: task/hogs");
-	workload(1 * MS, 5 * MS);	/* Exercise 18.4: try others */
+	workload(1 * MS, 5 * MS);
+	workload(10 * MS, 30 * MS);	/* Exercise 18.4: try others */
 	return 0;
 }
